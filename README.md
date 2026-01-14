@@ -215,3 +215,4 @@ This application embodies the Henrietta philosophy:
 
 The code structure mirrors these values through clean separation, clear contracts, and respectful user interactions.
 # henrietta
+# Henrietta
