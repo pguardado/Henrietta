@@ -31,23 +31,23 @@ const ExplorePage = () => {
       <Navigation onJoinRegistry={openRegistry} />
       
       <div className="relative flex-1 bg-[#210606]">
-        {/* Background Pattern - Reduced to 45% for smaller icons */}
+        {/* Background Pattern - Fixed position to prevent shifting */}
         <div 
-          className="absolute inset-0 w-full h-full"
+          className="fixed inset-0 w-full h-full"
           style={{
             backgroundImage: `url(${exploreBackground})`,
             backgroundSize: window.innerWidth < 768 ? 'auto 45%' : 'contain',
             backgroundPosition: 'top center',
             backgroundRepeat: 'repeat',
-            minHeight: '100%'
+            zIndex: 0
           }}
         />
         
-        {/* Solid background overlay covering header area - shorter height */}
+        {/* Solid background overlay covering header area */}
         <div 
           className="absolute inset-x-0 top-0 z-10 bg-[#231F20]"
           style={{
-            height: '180px' // Covers navbar + "Henrietta" title only
+            height: '180px'
           }}
         />
         
