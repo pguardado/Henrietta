@@ -10,15 +10,15 @@ import heroBackground from '../../assets/hero-background.svg';
 const Hero = ({ onJoinRegistry, onUnderstandWhy }) => {
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background Layer: Medical Silhouette Pattern - Responsive sizing */}
+      {/* Background Layer: Medical Silhouette Pattern - Smaller scale for more visibility */}
       <div 
         className="absolute inset-0 w-full h-full"
         style={{
           backgroundImage: `url(${heroBackground})`,
-          // Mobile: cover for visibility, Desktop: contain with repeat
-          backgroundSize: window.innerWidth < 768 ? 'cover' : 'contain',
+          // Mobile: smaller scale to show more silhouettes, Desktop: contain with repeat
+          backgroundSize: window.innerWidth < 768 ? '60%' : 'contain',
           backgroundPosition: 'top center',
-          backgroundRepeat: window.innerWidth < 768 ? 'no-repeat' : 'repeat-y',
+          backgroundRepeat: 'repeat-y',
           minHeight: '100%'
         }}
       />
@@ -50,9 +50,9 @@ const Hero = ({ onJoinRegistry, onUnderstandWhy }) => {
             </p>
           </div>
 
-          {/* CTAs - Compact, centered buttons with fully rounded corners */}
+          {/* CTAs - Compact buttons that hug content */}
           <div className="pt-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto sm:max-w-none">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               
               {/* Primary CTA */}
               <button
@@ -60,13 +60,12 @@ const Hero = ({ onJoinRegistry, onUnderstandWhy }) => {
                 className="
                   inline-flex items-center justify-center gap-2
                   bg-[#7B85B8] text-white
-                  px-6 py-3
-                  text-base font-medium
+                  px-5 py-2.5
+                  text-sm font-medium
                   rounded-lg
                   hover:bg-[#6A7399]
                   transition-colors
                   whitespace-nowrap
-                  w-full sm:w-auto
                 "
               >
                 Join the Registry
@@ -80,13 +79,12 @@ const Hero = ({ onJoinRegistry, onUnderstandWhy }) => {
                   inline-flex items-center justify-center gap-2
                   border border-[#7B85B8]
                   text-[#4A5F7A]
-                  px-6 py-3
-                  text-base font-medium
+                  px-5 py-2.5
+                  text-sm font-medium
                   rounded-lg
                   hover:bg-white/50
                   transition-colors
                   whitespace-nowrap
-                  w-full sm:w-auto
                 "
               >
                 Understand Why →
