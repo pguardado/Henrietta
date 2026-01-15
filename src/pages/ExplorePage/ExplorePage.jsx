@@ -30,44 +30,59 @@ const ExplorePage = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation onJoinRegistry={openRegistry} />
       
-      {/* Header Section - Intentional arrival moment with vertical silence */}
-      <div className="bg-[#231F20] px-6 pt-20 pb-16">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#7B85B8] mb-4">
-            Henrietta
-          </h1>
-          <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-            Explore how and why we're creating infrastructure for patient-owned health data. Choose what interests you.
-          </p>
-        </div>
-      </div>
-
-      {/* Doors Section with Fade-In Pattern */}
+      {/* Doors Section with Pattern Background */}
       <div className="relative flex-1 bg-[#210606]">
-        {/* Background Pattern - Full Opacity */}
+        {/* Background Pattern - Larger on mobile to match desktop visibility */}
         <div 
           className="absolute inset-0 w-full h-full"
           style={{
             backgroundImage: `url(${exploreBackground})`,
-            backgroundSize: 'contain',
+            backgroundSize: window.innerWidth < 768 ? 'auto 200%' : 'contain',
             backgroundPosition: 'top center',
-            backgroundRepeat: 'repeat-y',
+            backgroundRepeat: 'repeat',
             minHeight: '100%'
           }}
         />
         
-        {/* Gradient Overlay - Fades navbar color to transparent, revealing pattern */}
+        {/* Top Gradient - From navbar down */}
         <div 
-          className="absolute inset-x-0 top-0 pointer-events-none"
+          className="absolute inset-x-0 top-0 pointer-events-none z-10"
           style={{
-            height: '160px',
-            background: 'linear-gradient(to bottom, #231F20 0%, transparent 100%)'
+            height: '120px',
+            background: 'linear-gradient(to bottom, #231F20 0%, #231F20 25%, transparent 100%)'
           }}
         />
         
-        {/* Doors Content - Extra breathing room between pattern fade and first door */}
-        <div className="relative">
-          <div className="max-w-3xl mx-auto px-6 pt-28 pb-12">
+        {/* Hero Section - Balanced padding */}
+        <div className="relative z-20">
+          <div className="max-w-4xl mx-auto px-8 md:px-12">
+            <div className="relative">
+              {/* Solid background box - More balanced padding */}
+              <div className="bg-[#231F20] pt-8 md:pt-12 pb-12 md:pb-16 px-6">
+                <h1 className="text-3xl md:text-4xl font-bold text-[#7B85B8] mb-4">
+                  Henrietta
+                </h1>
+                <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                  Explore how and why we're creating infrastructure for patient-owned health data. Choose what interests you.
+                </p>
+              </div>
+              
+              {/* Gradient overlay */}
+              <div 
+                className="absolute inset-x-0 pointer-events-none"
+                style={{
+                  bottom: '-120px',
+                  height: '120px',
+                  background: 'linear-gradient(to bottom, #231F20 0%, #231F20 10%, transparent 100%)'
+                }}
+              />
+            </div>
+          </div>
+        </div>
+        
+        {/* Doors Content - Moderate spacing */}
+        <div className="relative z-10">
+          <div className="max-w-3xl mx-auto px-6 pt-20 md:pt-24 pb-12">
             <div className="space-y-2">
               {doorContent.map((door, index) => (
                 <Door
