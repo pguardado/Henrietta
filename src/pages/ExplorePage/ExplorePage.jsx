@@ -31,32 +31,32 @@ const ExplorePage = () => {
       <Navigation onJoinRegistry={openRegistry} />
       
       <div className="relative flex-1 bg-[#210606]">
-        {/* Background Pattern - Reduced to 60% */}
+        {/* Background Pattern - Reduced to 45% for smaller icons */}
         <div 
           className="absolute inset-0 w-full h-full"
           style={{
             backgroundImage: `url(${exploreBackground})`,
-            backgroundSize: window.innerWidth < 768 ? 'auto 60%' : 'contain',
+            backgroundSize: window.innerWidth < 768 ? 'auto 45%' : 'contain',
             backgroundPosition: 'top center',
             backgroundRepeat: 'repeat',
             minHeight: '100%'
           }}
         />
         
-        {/* Solid background overlay covering header area */}
+        {/* Solid background overlay covering header area - shorter height */}
         <div 
           className="absolute inset-x-0 top-0 z-10 bg-[#231F20]"
           style={{
-            height: '280px' // Covers navbar + header content
+            height: '180px' // Covers navbar + "Henrietta" title only
           }}
         />
         
-        {/* Gradient starts below header text */}
+        {/* Gradient starts after "Henrietta" title */}
         <div 
           className="absolute inset-x-0 z-10 pointer-events-none"
           style={{
-            top: '280px',
-            height: '100px',
+            top: '180px',
+            height: '120px',
             background: 'linear-gradient(to bottom, #231F20 0%, transparent 100%)'
           }}
         />
