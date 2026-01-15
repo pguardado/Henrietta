@@ -45,26 +45,26 @@ const ExplorePage = () => {
           }}
         />
         
-        {/* Solid background overlay - covers navbar + "Henrietta" title */}
+        {/* Solid background overlay - covers navbar + "Henrietta" title only */}
         <div 
           className="absolute inset-x-0 top-0 z-10 bg-[#231F20]"
           style={{
-            height: '240px'
+            height: '160px' // Covers navbar + "Henrietta" title only
           }}
         />
         
-        {/* Gradient starts after "Henrietta" title, before subtitle */}
+        {/* Gradient starts after "Henrietta" title */}
         <div 
           className="absolute inset-x-0 z-10 pointer-events-none"
           style={{
-            top: '240px',
+            top: '160px',
             height: '120px',
             background: 'linear-gradient(to bottom, #231F20 0%, transparent 100%)'
           }}
         />
         
-        {/* Header - More breathing room before accordions */}
-        <div className="relative z-20 pt-12 pb-24 md:pt-16 md:pb-32">
+        {/* Header - Original compact size */}
+        <div className="relative z-20 pt-12 pb-8 md:pt-16 md:pb-12">
           <div className="max-w-3xl mx-auto px-6">
             <h1 className="text-3xl md:text-4xl font-bold text-[#7B85B8] mb-4">
               Henrietta
@@ -75,9 +75,9 @@ const ExplorePage = () => {
           </div>
         </div>
         
-        {/* Doors Content */}
+        {/* Doors Content - Extra top padding to create gap showing background */}
         <div className="relative z-10">
-          <div className="max-w-3xl mx-auto px-6 pb-12">
+          <div className="max-w-3xl mx-auto px-6 pt-24 pb-12">
             <div className="space-y-2">
               {doorContent.map((door, index) => (
                 <Door
