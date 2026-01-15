@@ -5,18 +5,20 @@ import heroBackground from '../../assets/hero-background.svg';
 /**
  * Hero component - Landing section with medical pattern background
  * Primary conversion point with two intentional paths
+ * Mobile-optimized pattern visibility while preserving desktop design
  */
 const Hero = ({ onJoinRegistry, onUnderstandWhy }) => {
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background Layer: Medical Silhouette Pattern - Repeating for full coverage */}
+      {/* Background Layer: Medical Silhouette Pattern - Responsive sizing */}
       <div 
         className="absolute inset-0 w-full h-full"
         style={{
           backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'contain',
+          // Mobile: cover for visibility, Desktop: contain with repeat
+          backgroundSize: window.innerWidth < 768 ? 'cover' : 'contain',
           backgroundPosition: 'top center',
-          backgroundRepeat: 'repeat-y',
+          backgroundRepeat: window.innerWidth < 768 ? 'no-repeat' : 'repeat-y',
           minHeight: '100%'
         }}
       />
@@ -48,19 +50,19 @@ const Hero = ({ onJoinRegistry, onUnderstandWhy }) => {
             </p>
           </div>
 
-          {/* CTAs - Two clear paths: Join or Learn */}
+          {/* CTAs - Compact, centered buttons with fully rounded corners */}
           <div className="pt-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto sm:max-w-none">
               
               {/* Primary CTA */}
               <button
                 onClick={onJoinRegistry}
                 className="
-                  inline-flex items-center gap-2
+                  inline-flex items-center justify-center gap-2
                   bg-[#7B85B8] text-white
                   px-6 py-3
                   text-base font-medium
-                  rounded-l-lg sm:rounded-r-none
+                  rounded-lg
                   hover:bg-[#6A7399]
                   transition-colors
                   whitespace-nowrap
@@ -75,17 +77,16 @@ const Hero = ({ onJoinRegistry, onUnderstandWhy }) => {
               <button
                 onClick={onUnderstandWhy}
                 className="
-                  inline-flex items-center gap-2
+                  inline-flex items-center justify-center gap-2
                   border border-[#7B85B8]
                   text-[#4A5F7A]
                   px-6 py-3
                   text-base font-medium
-                  rounded-r-lg sm:rounded-l-none
+                  rounded-lg
                   hover:bg-white/50
                   transition-colors
                   whitespace-nowrap
                   w-full sm:w-auto
-                  mt-3 sm:mt-0
                 "
               >
                 Understand Why →

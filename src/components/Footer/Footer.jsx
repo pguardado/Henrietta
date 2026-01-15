@@ -2,7 +2,8 @@ import React from 'react';
 import { footerContent } from '../../constants/doorContent';
 
 /**
- * Footer component – Minimal messaging without navigation
+ * Footer component – Minimal, centered messaging without navigation
+ * Compact design with strategic spacing
  * Links section only renders if links exist in content
  */
 const Footer = ({ isDark = false }) => {
@@ -14,9 +15,9 @@ const Footer = ({ isDark = false }) => {
           : 'border-gray-200 bg-[#F5F7FA]'
       }`}
     >
-      <div className="max-w-3xl mx-auto px-6 py-12">
+      <div className="max-w-2xl mx-auto px-6 py-8 text-center">
         <p
-          className={`text-base mb-4 leading-relaxed ${
+          className={`text-sm mb-3 leading-relaxed ${
             isDark ? 'text-gray-300' : 'text-gray-700'
           }`}
         >
@@ -24,27 +25,17 @@ const Footer = ({ isDark = false }) => {
         </p>
 
         <p
-          className={`text-sm mb-6 leading-relaxed ${
+          className={`text-xs leading-relaxed ${
             isDark ? 'text-gray-400' : 'text-gray-600'
           }`}
         >
           {footerContent.grounding}
         </p>
 
-        <p
-          className={`text-sm leading-relaxed ${
-            isDark ? 'text-gray-400' : 'text-gray-600'
-          }`}
-        >
-          Henrietta
-          <sup className="text-xs opacity-70">™</sup> is trademarked to protect
-          this infrastructure from corporate co-option.
-        </p>
-
         {/* Only render links section if links exist */}
         {footerContent.links && footerContent.links.length > 0 && (
           <div
-            className={`flex justify-center gap-6 text-sm border-t pt-8 mt-8 ${
+            className={`flex justify-center gap-6 text-xs border-t pt-6 mt-6 ${
               isDark ? 'border-gray-700' : 'border-gray-200'
             }`}
           >
