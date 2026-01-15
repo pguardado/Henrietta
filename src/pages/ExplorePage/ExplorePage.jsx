@@ -49,7 +49,7 @@ const ExplorePage = () => {
         <div 
           className="absolute inset-x-0 top-0 z-10 bg-[#231F20]"
           style={{
-            height: '160px' // Covers navbar + "Henrietta" title only
+            height: '160px'
           }}
         />
         
@@ -75,9 +75,9 @@ const ExplorePage = () => {
           </div>
         </div>
         
-        {/* Doors Content - Extra top padding to create gap showing background */}
+        {/* Doors Content - Mobile gets extra breathing room */}
         <div className="relative z-10">
-          <div className="max-w-3xl mx-auto px-6 pt-24 pb-12">
+          <div className="max-w-3xl mx-auto px-6 pt-32 md:pt-24 pb-12">
             <div className="space-y-2">
               {doorContent.map((door, index) => (
                 <Door
