@@ -31,28 +31,37 @@ const ExplorePage = () => {
       <Navigation onJoinRegistry={openRegistry} />
       
       <div className="relative flex-1 bg-[#210606]">
-        {/* Background Pattern - Reduced size for mobile */}
+        {/* Background Pattern - Reduced to 60% */}
         <div 
           className="absolute inset-0 w-full h-full"
           style={{
             backgroundImage: `url(${exploreBackground})`,
-            backgroundSize: window.innerWidth < 768 ? 'auto 100%' : 'contain',
+            backgroundSize: window.innerWidth < 768 ? 'auto 60%' : 'contain',
             backgroundPosition: 'top center',
             backgroundRepeat: 'repeat',
             minHeight: '100%'
           }}
         />
         
-        {/* Simple top fade from navbar */}
+        {/* Solid background overlay covering header area */}
         <div 
-          className="absolute inset-x-0 top-0 pointer-events-none z-10"
+          className="absolute inset-x-0 top-0 z-10 bg-[#231F20]"
           style={{
-            height: '80px',
+            height: '280px' // Covers navbar + header content
+          }}
+        />
+        
+        {/* Gradient starts below header text */}
+        <div 
+          className="absolute inset-x-0 z-10 pointer-events-none"
+          style={{
+            top: '280px',
+            height: '100px',
             background: 'linear-gradient(to bottom, #231F20 0%, transparent 100%)'
           }}
         />
         
-        {/* Header - Simpler, no container box */}
+        {/* Header */}
         <div className="relative z-20 pt-12 pb-16 md:pt-16 md:pb-20">
           <div className="max-w-3xl mx-auto px-6">
             <h1 className="text-3xl md:text-4xl font-bold text-[#7B85B8] mb-4">
