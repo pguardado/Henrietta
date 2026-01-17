@@ -2,11 +2,11 @@ export const doorContent = [
   {
     id: 'name',
     title: 'Why the Name Henrietta',
-    summary: 'Henrietta is a person\'s name. Not a concept. Not a system. Not an abstraction.',
+    summary: 'Henrietta Lacks was a Black woman whose cells were taken without her consent in 1951 and became foundational to modern medicine.',
     content: {
       paragraphs: [
-        { text: 'We chose it deliberately.', weight: 'medium' },
-        { text: 'Healthcare is often discussed as policy, infrastructure, or cost. But the consequences of fragmentation are always personal. They land on individual lives, quietly and repeatedly, over time.' },
+        { text: 'We chose the name deliberately.', weight: 'medium' },
+        { text: 'Healthcare is often discussed as policy, infrastructure, or cost. But when care is organized around institutional authority rather than individual interest, consent disappears, and decisions are made without the person at the center.' },
         { text: 'Henrietta stands in for that reality.' },
         { text: 'Not as a symbol of suffering, and not as a story we\'re asking you to adopt, but as a reminder that care ultimately belongs to people, not institutions.' }
       ],
