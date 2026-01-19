@@ -37,7 +37,7 @@ const AboutPage = () => {
         />
         
         {/* Much narrower card on mobile */}
-        <div className="bg-white rounded-md w-full max-w-[20rem] sm:max-w-[22rem] md:max-w-2xl px-4 md:px-12 py-5 md:py-12 relative z-10">
+        <div className="bg-white rounded-md w-full max-w-72 sm:max-w-80 md:max-w-2xl px-4 md:px-12 py-5 md:py-12 relative z-10">
           <h1 className="text-lg md:text-4xl font-bold text-gray-900 mb-3 md:mb-8">
             About the Name
           </h1>
