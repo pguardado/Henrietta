@@ -2,10 +2,10 @@ export const doorContent = [
   {
     id: 'name',
     title: 'Why the Name Henrietta',
-    summary: 'Henrietta Lacks was a Black woman whose cells were taken without her consent in 1951 and became foundational to modern medicine.',
+    summary: 'Henrietta Lacks was a Black woman whose cells were taken without her consent in 1951. This name reminds us to build what she never had: care that belongs to you and a system that moves along with you.',
     content: {
       paragraphs: [
-        { text: 'We chose the name deliberately.', weight: 'medium' },
+        { text: 'We chose the name deliberately.' },
         { text: 'Healthcare is often discussed as policy, infrastructure, or cost. But when care is organized around institutional authority rather than individual interest, consent disappears, and decisions are made without the person at the center.' },
         { text: 'Henrietta stands in for that reality.' },
         { text: 'Not as a symbol of suffering, and not as a story we\'re asking you to adopt, but as a reminder that care ultimately belongs to people, not institutions.' }
