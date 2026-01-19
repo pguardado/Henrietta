@@ -19,7 +19,7 @@ export const doorContent = [
     summary: 'Fragmentation makes it feel like control keeps slipping away. Systems move people through. They don\'t hold onto them.',
     content: {
       paragraphs: [
-        { text: 'It comes from systems designed to move people through without really holding onto them.' },
+        { text: 'That pattern didn\'t end. Systems designed to move people through without really holding onto them.' },
         { text: 'When something changes, pieces get left behind, and you\'re expected to pick them up yourself. Sometimes that includes a new problem to manage, or a cost you didn\'t choose.' },
         { text: 'Over time, this starts to feel normal. Care becomes something you respond to, instead of something you build ahead of time.' },
         { text: 'So people adapt. For many, health becomes something they manage quietly through routines, habits, and constant self-adjustment, outside a system that feels reactive, expensive, or misaligned.' },
