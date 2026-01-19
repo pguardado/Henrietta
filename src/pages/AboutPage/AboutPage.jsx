@@ -28,7 +28,12 @@ const AboutPage = () => {
     >
       <Navigation onJoinRegistry={openRegistry} />
       
-      <main className="flex-1 flex items-center justify-center px-4 sm:px-6 md:px-8 py-6 md:py-20 relative">
+      <main 
+        className="flex-1 flex items-center justify-center px-4 sm:px-6 md:px-8 py-6 md:py-20 relative"
+        style={{
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)'
+        }}
+      >
         <div 
           className="absolute inset-0 pointer-events-none"
           style={{

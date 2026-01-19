@@ -9,7 +9,12 @@ import heroBackground from '../../assets/hero-background.svg';
  */
 const Hero = ({ onJoinRegistry, onUnderstandWhy }) => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div 
+      className="relative min-h-screen overflow-hidden"
+      style={{
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)'
+      }}
+    >
       {/* Background Layer: Medical Silhouette Pattern - Proper tiling */}
       <div 
         className="absolute inset-0 w-full h-full"
@@ -38,20 +43,26 @@ const Hero = ({ onJoinRegistry, onUnderstandWhy }) => {
             }}
           />
           
-          <div className="space-y-6 text-lg md:text-xl leading-relaxed text-[#2A3B47]">
-            {heroContent.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
-
-          <div className="border-l-4 border-[#2A3B47] pl-6 my-10">
-            <p className="text-lg md:text-xl font-medium text-[#2A3B47] leading-relaxed">
-              {heroContent.highlight}
+          {/* Content with spacing-based hierarchy */}
+          <div className="text-lg md:text-xl leading-relaxed text-[#2A3B47]">
+            {/* Paragraph 1 - Problem statement */}
+            <p className="mb-10">
+              {heroContent.paragraphs[0]}
+            </p>
+            
+            {/* Paragraph 2 - Value proposition (extra spacing creates emphasis) */}
+            <p className="my-12">
+              {heroContent.paragraphs[1]}
+            </p>
+            
+            {/* Paragraph 3 - Approach */}
+            <p>
+              {heroContent.paragraphs[2]}
             </p>
           </div>
 
           {/* CTAs - Compact buttons that hug content */}
-          <div className="pt-8">
+          <div className="pt-12">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               
               {/* Primary CTA */}

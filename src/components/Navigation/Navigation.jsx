@@ -10,7 +10,7 @@ const Navigation = ({ onJoinRegistry }) => {
   const isDarkPage = location.pathname === '/statement' || location.pathname === '/explore';
   
   return (
-    <nav className={isDarkPage ? "bg-[#231F20] border-b border-[#8194D5]/40" : "bg-[#8194D5]"}>
+    <nav className={isDarkPage ? "bg-[#231F20] border-b border-[#8B9FE8]/40" : "bg-[#8B9FE8]"}>
       <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link 
           to="/" 
@@ -26,7 +26,6 @@ const Navigation = ({ onJoinRegistry }) => {
           >
             Statement of Use
           </Link>
-          <span className="text-white/50">·</span>
           <button 
             onClick={onJoinRegistry}
             className="text-white/80 hover:text-white transition-colors font-medium"
